@@ -1,18 +1,19 @@
-import { Entity, PrimaryGeneratedColumn, Column,OneToMany, ManyToMany, JoinTable } from "typeorm"
+import { Entity, PrimaryGeneratedColumn, Column, OneToMany } from "typeorm";
 import { Grade } from "./Grade";
-import { Skill } from "./Skill";
 
 @Entity()
-export class Wilder{
-    @PrimaryGeneratedColumn()
-    id: number;
+export class Wilder {
+  @PrimaryGeneratedColumn()
+  id: number;
 
-    @Column()
-    name: string;
+  @Column()
+  name: string;
 
-    @Column()
-    description: string;
+  @Column()
+  description: string;
 
-    @OneToMany(()=> Grade, grade => grade.wilder)
-    public grades: Grade[]
+  @OneToMany(() => Grade, (grade) => grade.wilder, {
+    onDelete: "CASCADE",
+  })
+  public grades: Grade[];
 }
