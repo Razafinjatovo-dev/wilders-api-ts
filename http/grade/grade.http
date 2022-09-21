@@ -1,0 +1,12 @@
+### Create grade (and so to add skill to a wilder)
+POST http://localhost:5050/api/grade
+Content-Type: application/json
+
+{
+    "wilderId":"2",
+    "skillId":"3",
+    "grade":5
+}
+
+### Read grade 
+GET http://localhost:5050/api/grade

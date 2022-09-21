@@ -1,0 +1,26 @@
+
+### Create one wilder
+POST http://localhost:5050/api/wilder/create
+Content-Type: application/json
+
+{
+"name": "mario",
+ "description": "mario description"
+}
+
+### Read all wilders 
+GET http://localhost:5050/api/wilders
+
+
+### Update one wilder 
+PUT http://localhost:5050/api/wilder/update
+Content-Type: application/json
+
+{
+"wilderId": 2,
+ "description": " tintin",
+ "name":"tintin"
+}
+
+### Delete one wilder 
+DELETE  http://localhost:5050/api/wilder?wilderId=1

@@ -1,0 +1,7 @@
+### Create skill
+POST http://localhost:5050/api/skill/create
+Content-Type: application/json
+
+{
+    "name":"HTML5"
+}
